@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Este Chat - Modelo 3D Genérico</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer/dist/model-viewer.min.js"></script>
+</head>
+<body>
+  <model-viewer
+    id="model"
+    src="https://modelviewer.dev/shared-assets/models/phone.glb"
+    alt="Modelo de celular genérico"
+    camera-controls
+    auto-rotate
+    exposure="1"
+    shadow-intensity="1"
+    interaction-prompt="none"
+  >
+    <button
+      slot="hotspot-0"
+      class="hotspot"
+      data-position="0.0m 0.1m 0.0m"
+      data-normal="0 1 0"
+      aria-label="Zona batería"
+      onclick="alert('Medir voltaje aquí: 3.7V')"
+    ></button>
+  </model-viewer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
